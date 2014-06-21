@@ -5,7 +5,8 @@ Coursera Getting and Cleaning Data Course Project
 
 File: run_analysis.R
 Libraries: reshape2
-Input Data: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+Input Data: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 output: output.txt, tab-delimited file
 
 
@@ -47,3 +48,47 @@ When executed the code performs the following tasks:
 	Designate every other variable as measurements, to be summarized as means. 
 	Summarize each measurement variable (mean) by Subject and Activity
 14. Write a tab-delimited tidy data file to disk. output.txt
+
+
+CODEBOOK:
+
+# Getting and Cleaning Data Course Project
+# Francis A. Mendez
+# June 20, 2014
+
+# Website: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+# Libraries
+library(reshape2)
+
+
+
+# Read data
+
+dat.train: training set. Multivariate, Time-Series, Number of Attributes: 561; Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration. Triaxial Angular velocity from the gyroscope. 
+
+dat.train.y: the response set: scale: 1-6
+
+dat.train.sub: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+
+dat.test: testing set.  Multivariate, Time-Series, Number of Attributes: 561; Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration. Triaxial Angular velocity from the gyroscope. 
+
+dat.test.y: response set scale: 1-6
+
+dat.test.sub: the subjects set: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30.
+
+dat.names: name of features: 1:“WALKING”; 2, “WALKING_UPSTAIRS”; 3, "WALKING_DOWNSTAIRS”; 4, "SITTING”; 5”, STANDING”; 6, “LAYING"
+
+
+selection  # Choose variable with measurements for means and standard deviations: (“V1", "V2", "V3", "V4", "V5", "V6", "V41", "V42", "V43", "V44", "V45", "V46",  "V81", "V82", "V83", "V84", "V85", "V86", "V121", "V122", "V123", "V124", "V125", "V126", "V161", "V162", "V163", "V164", "V165", "V166",  "V201","V202",  "V214", "V215",  "V227","V228",
+  "V240","V241",  "V253","V254",  "V266", "V267", "V268", "V269", "V270", "V271",
+  "V345", "V346", "V347", "V348", "V349", "V350",  "V424", "V425", "V426", "V427", "V428", "V429",  "V503", "V504",  "V516", "V517",  "V529", "V530",  "V542", "V543")
+
+dat2:Dataset with measurements for means and sd
+
+dat3: Merged file with measurements (mean & sd) and activity
+
+dat4: Merged file with measurements, activity and subjects
+
+tidyData: Tidy data file Summarize each measurement variable (mean) by Subject and Activity
+
+
