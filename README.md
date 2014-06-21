@@ -52,18 +52,6 @@ When executed the code performs the following tasks:
 
 CODEBOOK:
 
-# Getting and Cleaning Data Course Project
-# Francis A. Mendez
-# June 20, 2014
-
-# Website: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
-# Libraries
-library(reshape2)
-
-
-
-# Read data
-
 dat.train: training set. Multivariate, Time-Series, Number of Attributes: 561; Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration. Triaxial Angular velocity from the gyroscope. 
 
 dat.train.y: the response set: scale: 1-6
